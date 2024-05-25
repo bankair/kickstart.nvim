@@ -416,6 +416,15 @@ require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = {
+      'suketa/nvim-dap-ruby',
+    },
+    config = function()
+      require('dap-ruby').setup()
+    end,
+  },
   { -- Permit to display errors and warnings in the quickfix
     'folke/trouble.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
