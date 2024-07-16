@@ -309,6 +309,12 @@ require('lazy').setup({
     end,
   },
 
+  {
+    'supermaven-inc/supermaven-nvim',
+    config = function()
+      require('supermaven-nvim').setup {}
+    end,
+  },
   -- NOTE: Plugins can specify dependencies.
   --
   -- The dependencies are proper plugin specifications as well - anything
