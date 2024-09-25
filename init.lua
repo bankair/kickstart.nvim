@@ -659,6 +659,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        -- html = { filetypes = { 'html', 'eruby' } },
 
         lua_ls = {
           -- cmd = {...},
@@ -887,6 +888,15 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+
+  -- A task runner and job management plugin for Neovim
+  {
+    'stevearc/overseer.nvim',
+    opts = {},
+    config = function()
+      require('overseer').setup()
+    end,
+  },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
